@@ -28,7 +28,6 @@ public class SoapEnvioPedidoAdapter implements EnvioPedidoPort {
         this.restTemplate = restTemplate;
         this.endpointUrl = endpointUrl;
         this.xmlMapper = new XmlMapper();
-        // 🔥 Ignorar cualquier tag desconocido que venga en el XML
         this.xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
